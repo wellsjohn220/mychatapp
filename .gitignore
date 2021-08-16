@@ -1,3 +1,4 @@
 learningnotes.txt
 node_modules
-.gitignoregit 
+.gitignore
+package-lock.json
