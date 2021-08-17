@@ -11,3 +11,7 @@ git remote set-url origin https://github.com/wellsjohn220/mychatapp.git
 git push -u origin master
 
 delete origin: git remote set-url origin https://github.com/wellsjohn220/mychatapp.git
+
+{"name": "James", "message": "What about your mission now."}
+
+npm install --save body-parser
