@@ -9,7 +9,6 @@ app.use(bodyParser.json())
 
 var messages = [
     {name: "John", message: "Hello from Sydney"}, 
-    {name: "Jane", message: "How are you"},
     {name: "Rose", message: "Nice to see you"}
 ]
 
@@ -17,10 +16,9 @@ app.get('/messages', (req, res) => {
     //res.send("Hello World from server by John")
     res.send(messages)
 })
-
 app.post('/messages', (req, res) => {
     console.log(req.body)
-    //messages.push(req.body);
+    messages.push(req.body);
     res.sendStatus(200);
 })
 
