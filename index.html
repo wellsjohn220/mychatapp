@@ -55,7 +55,7 @@
         });
         function addMessage(message) {
           $("#messages").append(
-            `<h5>${message.name}:&nbsp  ${message.message}</h5><hr />`
+            `<h5><span class="sendname">${message.name}</span>:&nbsp  ${message.message}</h5><hr />`
           );
         }
         function getMessages() {
