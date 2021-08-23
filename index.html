@@ -19,11 +19,13 @@
       <div class="jumbotron">
         <h1 class="display-4">Send Message</h1>
         <br />
-        <input
-          id="name"
+        <input id="name" class="form-control" placeholder="Name" />
+        <br />
+        <textarea
+          id="message"
           class="form-control"
-          placeholder="enter your message here"
-        />
+          placeholder="Message"
+        ></textarea>
         <br />
         <button id="send" class="btn btn-primary">Send Message</button>
       </div>
@@ -32,10 +34,11 @@
         $(() => {
           console.log("Page loaded by John");
           $("#send").click(() => {
-            addMessage({
-              name: "Johnson",
-              message: "Hello World from Wells College!",
-            });
+            var message = {
+              name: $("#name").val(),
+              message: $("#message").val(),
+            };
+            postMessage(message);
           });
           getMessages();
         });
@@ -51,6 +54,9 @@
             console.log(data);
             data.forEach(addMessage);
           });
+        }
+        function postMessage(message) {
+          $.post("http://localhost:3010/messages", message);
         }
       </script>
     </div>
