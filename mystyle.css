@@ -1,0 +1,7 @@
+hr {
+  border: 1px dotted blue;
+}
+#name,
+#message {
+  background-color: lightyellow;
+}
