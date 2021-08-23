@@ -22,9 +22,7 @@
     <div class="container">
       <br />
       <div class="jumbotron">
-        <h1 class="display-4">
-          Send Message</i>
-        </h1>
+        <h1 class="display-4">Send Message</h1>
         <br />
         <input id="name" class="form-control" placeholder="Name" />
         <br />
@@ -34,7 +32,13 @@
           placeholder="Message"
         ></textarea>
         <br />
-        <button id="send" class="btn btn-primary"><i class="fas fa-envelope-square"></i>&nbsp;Send Message</button>
+        <button
+          id="send"
+          class="btn btn-primary"
+          onClick="document.location.reload(true)"
+        >
+          <i class="fas fa-envelope-square"></i>&nbsp;Send Message
+        </button>
       </div>
       <div id="messages"></div>
       <script>
