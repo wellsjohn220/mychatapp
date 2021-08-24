@@ -44,6 +44,7 @@
       </div>
       <div id="messages"></div>
       <script>
+        var socket = io();
         $(() => {
           console.log("Page loaded by John");
           $("#send").click(() => {
@@ -55,6 +56,8 @@
           });
           getMessages();
         });
+        socket.on("message", addMessage);
+
         function addMessage(message) {
           $("#messages").append(
             `<h5><span class="sendname">${message.name}</span>:&nbsp  ${message.message}</h5><hr />`

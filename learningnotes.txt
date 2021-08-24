@@ -15,3 +15,7 @@ delete origin: git remote set-url origin https://github.com/wellsjohn220/mychata
 {"name": "James", "message": "What about your mission now."}
 
 npm install --save body-parser
+
+npm install --save socket.io
+
+npm install --save mongoose
