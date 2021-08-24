@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
     <title>Document Test by nodemon</title>
   </head>
   <body>
@@ -44,7 +45,7 @@
       </div>
       <div id="messages"></div>
       <script>
-        var socket = io();
+        //var socket = io();
         $(() => {
           console.log("Page loaded by John");
           $("#send").click(() => {
@@ -56,7 +57,7 @@
           });
           getMessages();
         });
-        socket.on("message", addMessage);
+        //socket.on("message", addMessage);
 
         function addMessage(message) {
           $("#messages").append(
