@@ -17,14 +17,16 @@ var dbUrl = 'mongodb+srv://Admin:Sh268268@chatapp.vrbrl.mongodb.net/chatappdb?re
 var Message = mongoose.model('Message', {
     name : String, message: String
 })
-var messages = [
-    {name: "John", message: "Hello from Sydney send by hard code"}, 
-    {name: "Rose", message: "Nice to see you send by hard code"}
-]
-
+// var messages = [
+//     {name: "John", message: "Hello from Sydney send by hard code"}, 
+//     {name: "Rose", message: "Nice to see you send by hard code"}
+// ]
 app.get('/messages', (req, res) => {
     //res.send("Hello World from server by John")
-    res.send(messages)
+    Message.find({}, (err, messages) => {
+        res.send(messages)
+    })
+    
 })
 app.post('/messages', (req, res) => {
     var message = new Message(req.body)
@@ -33,7 +35,7 @@ app.post('/messages', (req, res) => {
         res.sendStatus(500);
 
         console.log(req.body)
-        messages.push(req.body);
+        //messages.push(req.body);
         io.emit('message', req.body);
         res.sendStatus(200);
     })   
@@ -41,7 +43,7 @@ app.post('/messages', (req, res) => {
 
 mongoose.connect(dbUrl, (err) => {
     //if (err) return console.log(err);
-    console.log('mongodb connection successful')
+    console.log('Mongodb connection successfully by John')
 })
 
 // socket.on("connect", () => {
