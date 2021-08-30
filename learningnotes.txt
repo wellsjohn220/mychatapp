@@ -19,3 +19,8 @@ npm install --save body-parser
 npm install --save socket.io
 
 npm install --save mongoose
+
+$ git config --global user.email windsorjohn@220@gmail.com
+$ git commit -m "week eight version"
+$ git push -u origin master
+https://github.com/wellsjohn220/mychatapp

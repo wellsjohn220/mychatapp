@@ -1,8 +1,10 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const app = express()
-var http = require('http').Server(app)
-var io = require('socket.io')(http)
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+const socketio = require('socket.io')
+//const { Socket } = require('dgram')
 var mongoose = require('mongoose')
 
 const port = process.env.PORT || 3010
@@ -46,9 +48,9 @@ mongoose.connect(dbUrl, (err) => {
     console.log('Mongodb connection successfully by John')
 })
 
-// socket.on("connect", () => {
-//   console.log(socket.connected); // true
-// });
+io.on("connection", (socket) => {
+  console.log('user connected'); // true
+});
 
 var server = app.listen(port, () => {
     console.log('Server is listening on port', port)
