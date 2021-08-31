@@ -24,3 +24,7 @@ $ git config --global user.email windsorjohn@220@gmail.com
 $ git commit -m "week eight version"
 $ git push -u origin master
 https://github.com/wellsjohn220/mychatapp
+
+https://cors-anywhere.herokuapp.com/https://polar-dawn-23857.herokuapp.com/
+https://polar-dawn-23857.herokuapp.com/
+
