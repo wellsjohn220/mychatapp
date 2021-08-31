@@ -19,7 +19,7 @@
     <!-- <script src="/socket.io/socket.io.js"></script> -->
     <link rel="shortcut icon" href="FACE05.ICO" />
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
-    <title>Test by 12345</title>
+    <title>gTest by 12345</title>
   </head>
   <body>
     <div class="container">
@@ -65,13 +65,15 @@
           );
         }
         function getMessages() {
-          $.get("http://localhost:3010/messages", (data) => {
+          //$.get("http://localhost:3010/messages", (data) => {
+          $.get("https://polar-dawn-23857.herokuapp.com/messages", (data) => {
             console.log(data);
             data.forEach(addMessage);
           });
         }
         function postMessage(message) {
-          $.post("http://localhost:3010/messages", message);
+          // $.post("http://localhost:3010/messages", message);
+          $.post("https://polar-dawn-23857.herokuapp.com/messages", message);
         }
       </script>
     </div>
